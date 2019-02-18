@@ -3,12 +3,17 @@ public class CreditCard
     private int pinCode;
     private int cardNumber;
 
-    public CreditCard (int cardNumber, int pinCode)
+    public CreditCard (int pinCode)
     {
         this.cardNumber = cardNumber;
         this.pinCode = pinCode;
     }
 
+    /**
+     * Validates the pin
+     * @param pinCode
+     * @return if pin is correct
+     */
     public boolean validate(int pinCode)
     {
         if (this.pinCode == pinCode)
@@ -21,8 +26,4 @@ public class CreditCard
         }
     }
 
-    public int getCardNumber()
-    {
-        return cardNumber;
-    }
 }

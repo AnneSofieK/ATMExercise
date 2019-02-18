@@ -14,18 +14,37 @@ public class Account
         creditCards.add(creditCard);
     }
 
-    public double withDraw(double amount)
+    /**
+     * Subtracts the amount from the balance
+     * @param amount
+     */
+    public void withDraw(BigDecimal amount)
     {
-        return 0;
+        balance = balance.subtract(amount);
     }
 
+    /**
+     * @return balance on account
+     */
     public BigDecimal getBalance()
     {
         return balance;
     }
 
+    /**
+     *
+     * @return arraylist of the creditcards connected to the account
+     */
     public ArrayList getCreditCards()
     {
         return creditCards;
+    }
+
+    /**
+     * @return the accountNumber
+     */
+    public int getAccountNumber()
+    {
+        return accountNumber;
     }
 }
